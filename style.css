@@ -1,0 +1,48 @@
+section{
+    perspective: 800px;
+}
+
+div{
+    height: 300px;
+    width: 500px;
+    margin: 50px auto;
+}
+
+.side-1 img{
+    height: 300px;
+    width: 500px;
+}
+
+
+
+.wrap{
+    transition-property: all;
+    transition-duration: 1s;
+    transform-style: preserve-3d;
+}
+
+.side-1{
+    background-color: aqua;
+    z-index: 2;
+}
+
+.side-2{
+    background-color: blue;
+    transform: rotateY(180deg);
+}
+
+.side-2 h5{
+    text-align: center;
+}
+
+.side-1,.side-2{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+
+
+.wrap:hover{
+    transform: rotateY(180deg);
+    /* transform-origin: right; */
+}
